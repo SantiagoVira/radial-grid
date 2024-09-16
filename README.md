@@ -33,8 +33,8 @@ This will produce 6 evenly-spaced tick marks, all tilted toward the center.
 ```js
 import { RadialGrid, RadialRow } from "radial-grid";
 
-<RadialGrid className="w-52">
-  <RadialRow className="bg-red-800 rounded-full">
+<RadialGrid>
+  <RadialRow>
     <p>|</p>
     <p>|</p>
     <p>|</p>
@@ -52,8 +52,8 @@ provide, you may use the `preserveChildRotation` prop. For
 example, to make a clock-like layout:
 
 ```js
-<RadialGrid className="w-52">
-  <RadialRow className=" bg-red-800 rounded-full" preserveChildRotation>
+<RadialGrid>
+  <RadialRow preserveChildRotation>
     <p>1</p>
     <p>2</p>
     <p>3</p>
@@ -83,12 +83,8 @@ not reaching the given end angle. To fix this, use the `lastMeetEnd` prop to hav
 the elements evenly spaced throughout.
 
 ```js
-<RadialGrid className="w-52">
-  <RadialRow
-    className=" bg-red-800 rounded-full"
-    startAngle={90}
-    endAngle={270}
-    lastMeetEnd>
+<RadialGrid>
+  <RadialRow startAngle={90} endAngle={270} lastMeetEnd>
     <p>|</p>
     <p>|</p>
     <p>|</p>
@@ -105,32 +101,22 @@ specify the `diameter` prop on each with a valid CSS width
 value. This diameter represents the outer diameter of the row.
 
 ```js
-<RadialGrid className="w-52">
-  <RadialRow
-    diameter={"15rem"}
-    className=" bg-red-800 rounded-full"
-    startAngle={90}
-    endAngle={270}
-    lastMeetEnd>
+<RadialGrid>
+  <RadialRow diameter={"15rem"} startAngle={90} endAngle={270} lastMeetEnd>
     <p>|</p>
     <p>|</p>
     <p>|</p>
     <p>|</p>
     <p>|</p>
   </RadialRow>
-  <RadialRow
-    diameter={"10rem"}
-    className=" bg-blue-800 rounded-full my-6"
-    startAngle={270}
-    endAngle={450}
-    lastMeetEnd>
+  <RadialRow diameter={"10rem"} startAngle={270} endAngle={450} lastMeetEnd>
     <p>|</p>
     <p>|</p>
     <p>|</p>
     <p>|</p>
     <p>|</p>
   </RadialRow>
-  <RadialRow diameter={"5rem"} className=" bg-green-800 rounded-full">
+  <RadialRow diameter={"5rem"}>
     <p>|</p>
     <p>|</p>
     <p>|</p>
@@ -140,5 +126,24 @@ value. This diameter represents the outer diameter of the row.
     <p>|</p>
     <p>|</p>
   </RadialRow>
+</RadialGrid>
+```
+
+### Adding a Center
+
+You can add an element in the middle of your circle like so:
+
+```js
+<RadialGrid>
+  <RadialRow lastMeetEnd>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+    <p>|</p>
+  </RadialRow>
+  <RadialCenter>
+    <p>😀</p>
+  </RadialCenter>
 </RadialGrid>
 ```

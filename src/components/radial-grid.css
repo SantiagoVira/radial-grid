@@ -12,6 +12,13 @@
   display: grid;
 }
 
+.center-container {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  justify-self: center;
+}
+
 .element {
   height: 100%;
   width: fit-content;
