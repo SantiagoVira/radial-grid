@@ -24,7 +24,9 @@ const RadialGrid: React.FC<
   return (
     <div className="container">
       {React.Children.map(children, (child, i) => {
-        const count = React.Children.count(children) - (lastMeetEnd ? 1 : 0);
+        let count = React.Children.count(children);
+        if (lastMeetEnd && count > 1) count--;
+
         const angle = scale360((360 / count) * i, startAngle, endAngle);
         return (
           <div
