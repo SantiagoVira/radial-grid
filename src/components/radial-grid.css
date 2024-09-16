@@ -1,13 +1,23 @@
-.container {
-  position: relative;
+.grid-container {
+  display: grid;
   aspect-ratio: 1;
 }
+
+.row-container {
+  aspect-ratio: 1;
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+}
+
 .element {
   height: 100%;
   width: fit-content;
-  transform-origin: top left;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  justify-self: center;
 }

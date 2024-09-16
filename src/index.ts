@@ -1,2 +1,4 @@
-import RadialGrid from "./components/radial-grid";
-export default RadialGrid;
+import { RadialGrid } from "./components/radial-grid";
+import { RadialRow } from "./components/radial-row";
+
+export { RadialGrid, RadialRow };
