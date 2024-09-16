@@ -1,6 +1,6 @@
 {
   "name": "radial-grid",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -39,6 +39,8 @@
   },
   "dependencies": {
     "@types/react": "^18.3.6",
-    "rollup-plugin-postcss": "^4.0.2"
+    "clsx": "^2.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tailwind-merge": "^2.5.2"
   }
 }

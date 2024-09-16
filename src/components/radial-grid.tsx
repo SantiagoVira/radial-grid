@@ -1,5 +1,6 @@
 import React from "react";
 import "./radial-grid.css";
+import { cn } from "../utils/cn";
 
 const scale360 = (value: number, outMin: number, outMax: number) => {
   const inMin = 0;
@@ -13,6 +14,7 @@ const RadialGrid: React.FC<
     startAngle?: number;
     endAngle?: number;
     lastMeetEnd?: boolean;
+    className?: string;
   }>
 > = ({
   children,
@@ -20,9 +22,10 @@ const RadialGrid: React.FC<
   startAngle = 0,
   endAngle = 360,
   lastMeetEnd = false,
+  className = "",
 }) => {
   return (
-    <div className="container">
+    <div className={cn("container", className)}>
       {React.Children.map(children, (child, i) => {
         let count = React.Children.count(children);
         if (lastMeetEnd && count > 1) count--;
