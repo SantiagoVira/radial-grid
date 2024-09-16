@@ -1,10 +1,24 @@
 {
   "name": "radial-grid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "keywords": [
+    "circle",
+    "circular",
+    "radial",
+    "radius",
+    "layout",
+    "circle layout",
+    "circular layout",
+    "radial layout",
+    "react",
+    "react.js",
+    "node",
+    "node.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup -c --bundleConfigAsCjs"
