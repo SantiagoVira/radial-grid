@@ -54,6 +54,7 @@ example, to make a clock-like layout:
 ```js
 <RadialGrid>
   <RadialRow preserveChildRotation>
+    <p>12</p>
     <p>1</p>
     <p>2</p>
     <p>3</p>
@@ -65,7 +66,6 @@ example, to make a clock-like layout:
     <p>9</p>
     <p>10</p>
     <p>11</p>
-    <p>12</p>
   </RadialRow>
 </RadialGrid>
 ```
